@@ -5,13 +5,14 @@
 
 body {
     background-color: #f6f8fc;
+    overflow-x: hidden;
 }
 
 .content {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #3e3e3e;
 }
 
 @media screen and (min-width: 992px) {

@@ -1,8 +1,13 @@
+.titulo {
+    color: #fff;
+    padding-left: 3rem;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0;
-    padding: 0;
+    
     list-style: none;
 }
 
@@ -86,11 +91,40 @@
     border-radius: 1rem;
 }
 
+.cardLink {
+    background-color: #232323f1;
+    max-width: 250px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+  
+.cardLink:hover .cardBg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+}
+  
+.cardBg {
+    height: 120px;
+    width: 150px;
+    z-index: -2;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
 .pokemon .number {
     color: #000;
-    opacity: .3;
+    opacity: .7;
     text-align: right;
-    font-size: .625rem;
+    font-size: .8rem;
+    font-weight: bold;
 }
 
 .pokemon .name {
@@ -139,11 +173,81 @@
 .pagination button {
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1rem;
     color: #fff;
-    background-color: #6c79db;
+    background-color: #121312;
     border: none;
     border-radius: 1rem;
+}
+
+.text-box {
+    margin-left: 44vw;
+	 margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 @media screen and (min-width: 380px) {

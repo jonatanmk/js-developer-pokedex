@@ -2,7 +2,8 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 var pokedexList = [];
 let likedParam = '';
-let popup = document.querySelector('#popup');
+let blur = document.querySelector('.content')
+let boxModal = document.querySelector('.box-modal');
 let modal = document.querySelector('.modal');
 let infoDetails = document.querySelector('.infoModal');
 
@@ -74,6 +75,8 @@ function openModal(pokemonId) {
     let index = (pokemonId-1) % limit;
     let pokemon = catchPokemon(pokemonId);
     const newModal = buildModal(pokemon);
+    blur.style.filter = 'blur(40px)';
+    boxModal.style.display = 'flex'
     modal.style.display = 'block';
     modal.classList.add(`${pokemon.type}`);    
     modal.innerHTML += newModal;
@@ -117,8 +120,10 @@ function closeModal(pokemonId) {
     let pokemon = catchPokemon(pokemonId);
 
     modal.classList.remove(`${pokemon.type}`);
-    modal.style.display = "none";
-    modal.innerHTML = "";
+    blur.style.filter = '';
+    boxModal.style.display = 'none';
+    modal.style.display = 'none';
+    modal.innerHTML = '';
 
     closePopUp();
 
@@ -130,7 +135,7 @@ function closeModal(pokemonId) {
 //Constrói a janela modal
 function buildModal(pokemon) {
     return `
-    <div class="header">
+    <div class="header" data-backdrop="static">
         <div class="buttons">
         <div class="back">
             <button onclick="closeModal(${pokemon.number})">

@@ -15,11 +15,24 @@ body {
     background-color: #3e3e3e;
 }
 
-@media screen and (min-width: 992px) {
+
     .content {
         max-width: 992px;
         height: auto;
+        padding-top: 6rem;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+
+
+@media (max-width: 1058px) {
+    .content{
+        padding-top: 9rem;
+    }
+}
+
+@media (max-width: 725px) {
+    .content{
+        padding-top: 19rem;
     }
 }

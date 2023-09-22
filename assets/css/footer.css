@@ -1,0 +1,34 @@
+
+.footer1 {
+    width: 100%;
+    height: 3rem;
+    padding-top: 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    border-color: #fff;
+}
+
+.footer1 a {
+    text-decoration: none;
+}
+
+.footer1 img {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 30px;
+}
+
+.footer2 {
+    width: 100%;
+    height: 3rem;
+    padding-top: 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    border-color: #fff;
+}
+
+

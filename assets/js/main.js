@@ -139,7 +139,7 @@ function buildModal(pokemon) {
         <div class="buttons">
         <div class="back">
             <button onclick="closeModal(${pokemon.number})">
-                <img src="./assets/img/arrow.png" alt="Voltar">
+                <img src="./assets/img/close.svg" alt="Voltar">
             </button>
         </div>
 
@@ -162,7 +162,7 @@ function buildModal(pokemon) {
 
     <div class="detailsModal">
         <ul class="menuModal">
-            <button id="menu1" class="selected" onclick="menuSelector('menu1', '${pokemon.number}')">
+            <button id="menu1" class="selected ${pokemon.type}" onclick="menuSelector('menu1', '${pokemon.number}')">
                 <li>About</li>
             </button>
             <button id="menu2" class="" onclick="menuSelector('menu2', '${pokemon.number}')">

@@ -13,7 +13,7 @@
 
 .modal {
   width: 30rem;
-  height: 80%;
+  height: 40rem;
   display: none;
   animation: animate;
   animation-duration: 1600ms;

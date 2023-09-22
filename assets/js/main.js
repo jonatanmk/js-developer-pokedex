@@ -95,17 +95,6 @@ function openModal(pokemonId) {
     let msg = details(id, pokemonId);
     menuInfo.innerHTML = msg;
 
-    //Inicializa o botão de favorito, caso estiver favoritado
-    let botao = document.querySelector('.heart');
-
-    if (pokemon.liked == false || pokemon.liked == undefined) {
-        pokedexList[page][index].liked = false;
-        botao.classList.remove("liked");
-    } else {
-        pokedexList[page][index].liked = true;
-        botao.classList.add("liked");
-    }
-
     //Chama função de formatar dados
     formatData();
 
@@ -125,11 +114,9 @@ function closeModal(pokemonId) {
     modal.style.display = 'none';
     modal.innerHTML = '';
 
-    closePopUp();
-
     //Volta a barra de rolagem do corpo da página
-    // let content = document.querySelector('body');
-    // content.style.overflowY  = 'scroll';
+    let content = document.querySelector('body');
+    content.style.overflowY  = 'scroll';
 }
 
 //Constrói a janela modal

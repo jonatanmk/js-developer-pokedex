@@ -1,4 +1,3 @@
-
 const pokeApi = {}
 
 // Busca os Pokemons na API
